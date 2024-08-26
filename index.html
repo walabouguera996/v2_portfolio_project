@@ -6,6 +6,18 @@
     <title>Responsive Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!--email js-->
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init({
+          publicKey: "oUvO3WIJu-ENeqC08",
+        });
+    })();
+</script>
+<script src="email.js"></script>
 
 </head>
 <body>
@@ -204,16 +216,16 @@
     <form>
         <div class="input-group">
             <div class="input-box">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Email ID" required >
+                <input id="name" type="text" placeholder="Full Name" required>
+                <input id="email" type="email" placeholder="Email ID" required >
             </div>
             <div class="input-box">
-                <input type="number" id="phone" placeholder="Phone Number" required>
-                <input type="text" placeholder="subject">
+                <input id="number" type="number" id="phone" placeholder="Phone Number" required>
+                <input id="text" type="text" placeholder="subject">
             </div>
         </div>
         <div class="input-group-2">
-            <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea name="" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message" class="btn">
         </div>
     </form>
